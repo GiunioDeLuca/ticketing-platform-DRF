@@ -1,0 +1,11 @@
+<div>
+    {% for match in matches %}
+        <div class="matchname">
+            <a href="{% url 'match_detail' match.id %}">
+                <h3>{{match.name}}</h3>
+            </a>
+            <p>{{match.stadium.name}}</p>
+            <p>{{match.date}}</p>
+        </div>
+    {% endfor %}
+</div>
